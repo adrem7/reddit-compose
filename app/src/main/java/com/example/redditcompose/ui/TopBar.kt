@@ -63,11 +63,15 @@ fun TopBar(
                 .height(24.dp)
         ) {
             tabData.forEachIndexed { index, text ->
-                Tab(selected = tabIndex == index, onClick = {
-                    tabIndex = index
-                }, text = {
-                    Text(text = text)
-                })
+                Tab(
+                    selected = tabIndex == index,
+                    onClick = {
+                        tabIndex = index
+                    },
+                    text = {
+                        Text(text = text)
+                    }
+                )
             }
         }
     }
