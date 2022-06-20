@@ -1,12 +1,9 @@
 package com.example.redditcompose.ui
 
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Scaffold
 import androidx.compose.material.Surface
-import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
@@ -25,15 +22,7 @@ class App {
             {
                 Scaffold(
                     topBar = { TopBar() },
-                    content = { paddingValues ->
-                        Column(
-                            modifier = Modifier
-                                .padding(paddingValues)
-                        ) {
-                            Text("Hello World Content Zone")
-//                            FeedView()
-                        }
-                    },
+                    content = { paddingValues -> FeedView(paddingValues) },
                     bottomBar = { BottomBar() })
             }
         }
