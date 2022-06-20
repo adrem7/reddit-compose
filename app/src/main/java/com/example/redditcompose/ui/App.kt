@@ -1,11 +1,15 @@
 package com.example.redditcompose.ui
 
-import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
-import androidx.compose.runtime.*
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Surface
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.unit.dp
 import com.example.redditcompose.ui.theme.MyRedditTheme
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
 
@@ -26,36 +30,13 @@ class App {
                             modifier = Modifier
                                 .padding(paddingValues)
                         ) {
-                            var userInput by remember { mutableStateOf("") }
-                            TextField(value = "Hello World", onValueChange = { })
+                            Text("Hello World Content Zone")
 //                            FeedView()
                         }
-                    })
+                    },
+                    bottomBar = { BottomBar() })
             }
         }
-    }
-
-    @Composable
-    private fun TopBar() {
-
-        TopAppBar(
-            title = {
-                Row(
-                    modifier = Modifier.fillMaxWidth()
-                ) {
-//                    Image(
-//                        painter = painterResource(/*id = R.drawable.instalogic*/),
-//                        contentDescription = "Instalogic",
-//                        modifier = Modifier
-//                            .width(100.dp)
-//                            .padding(top = 10.dp)
-//                    )
-                }
-            },
-            backgroundColor = Color.White,
-            modifier = Modifier.height(40.dp),
-            elevation = 0.dp
-        )
     }
 
     @Composable

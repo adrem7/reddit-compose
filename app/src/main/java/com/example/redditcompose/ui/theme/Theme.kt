@@ -1,17 +1,32 @@
 package com.example.redditcompose.ui.theme
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 
-private val DarkColorPalette = darkColors(
-    primary = RedditBlue,
-    primaryVariant = RedditLightBlue,
-    secondary = RedditRed,
+//primary: Color,
+//primaryVariant: Color,
+//secondary: Color,
+//secondaryVariant: Color,
+//background: Color,
+//surface: Color,
+//error: Color,
+//onPrimary: Color,
+//onSecondary: Color,
+//onBackground: Color,
+//onSurface: Color,
+//onError: Color,
+//isLight: Boolean
 
-    )
+private val DarkColorPalette = darkColors(
+    primary = RedditLightBlue,
+    primaryVariant = RedditBlue,
+    secondary = RedditRed,
+//    secondaryVariant = ,
+    background = RedditBlack100,
+    surface = RedditBlack80,
+)
 
 private val LightColorPalette = lightColors(
     primary = RedditBlue,
@@ -30,7 +45,7 @@ private val LightColorPalette = lightColors(
 
 @Composable
 fun MyRedditTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
+    darkTheme: Boolean = true,//isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
     val colors = if (darkTheme) {
